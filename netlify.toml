@@ -1,0 +1,15 @@
+# netlify.toml
+
+[build]
+  # Commande pour construire le projet
+  command = "npm run build"
+  
+  # Dossier contenant les fichiers statiques après la construction
+  publish = "dist"
+
+[[redirects]]
+  # Règle essentielle pour les applications React (Single Page Applications)
+  # Toutes les routes sont redirigées vers index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
